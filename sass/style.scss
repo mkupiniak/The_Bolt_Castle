@@ -1,0 +1,1003 @@
+//* --- background --- */
+$bg-color: #8ddee2;
+$cloud: #fff3e3;
+$sun-border: #b0e4e2;
+$big-clouds: #b0e4e2;
+$shadow: #d25962;
+//* --- roof --- */
+$flag-blue: #537fc0;
+$flag-pole: #fef2e2;
+$dark-red: #db6c75;
+$light-red: #e4a49b;
+$roof-white: #fff3e3;
+//* --- walls --- */
+$brick-dark: #db6c75;
+$brick-light: #e3a49b;
+//* --- windows --- */
+$window-blue: #465981;
+$window-white: #fcf8ef;
+$window-dark-white: #f2ccc9;
+//* --- foundation --- */
+$green: #98d683;
+
+/* --- STYLES --- */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+.c-box {
+    box-sizing: content-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 2em;
+    background-color: #eee;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 75em;
+    height: 60em;
+    background-color: #fff;
+    padding: 2em;
+}
+
+main {
+    background-color: $bg-color;
+    width: 100%;
+    height: 100%;
+    padding: 2em;
+    position: relative;
+    z-index: 1;
+}
+
+.sun {
+    position: absolute;
+    width: 7.2em;
+    height: 7.2em;
+    border-radius: 50%;
+    background-color: $cloud;
+    border: 15px solid $sun-border;
+    left: 41em;
+    top: 10.5em;
+}
+
+.cloud-sm {
+    width: 3.4em;
+    height: 5em;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $cloud;
+}
+
+.cloud-lg {
+    width: 4.6em;
+    height: 6.2em;
+    position: absolute;
+    border-radius: 50%;
+    background-color: $cloud;
+}
+
+
+/* --------------- 
+    BRICKS STYLES
+------------------*/
+
+.brick-sm-l {
+    position: absolute;
+    background-color: $brick-light;
+    width: 0.6em;
+    height: 0.6em;
+}
+
+.brick-sm-d {
+    position: absolute;
+    background-color: $brick-dark;
+    width: 0.6em;
+    height: 0.6em;
+}
+
+.brick-md-l {
+    position: absolute;
+    background-color: $brick-light;
+    width: 1.1em;
+    height: 0.6em;
+}
+
+.brick-md-l-l {
+    position: absolute;
+    background-color: $brick-light;
+    width: 1.2em;
+    height: 0.6em;
+}
+
+.brick-md-d {
+    position: absolute;
+    background-color: $brick-dark;
+    width: 1.1em;
+    height: 0.6em;
+}
+
+.brick-md-l-d {
+    position: absolute;
+    background-color: $brick-dark;
+    width: 1.2em;
+    height: 0.6em;
+}
+
+.brick-lg-l {
+    position: absolute;
+    background-color: $brick-light;
+    width: 1.1em;
+    height: 0.7em;
+}
+
+.brick-lg-l-l {
+    position: absolute;
+    background-color: $brick-light;
+    width: 1.2em;
+    height: 0.7em;
+}
+
+.brick-lg-d {
+    position: absolute;
+    background-color: $brick-dark;
+    width: 1.1em;
+    height: 0.7em;
+}
+
+.brick-lg-l-d {
+    position: absolute;
+    background-color: $brick-dark;
+    width: 1.2em;
+    height: 0.7em;
+}
+
+.brick-xl-l {
+    position: absolute;
+    background-color: $brick-light;
+    width: 2em;
+    height: 0.6em;
+}
+
+.brick-xl-d {
+    position: absolute;
+    background-color: $brick-dark;
+    width: 2em;
+    height: 0.7em;
+}
+
+.mast {
+    position: absolute;
+    width: 0.5em;
+    height: 3em;
+    background-color: $flag-pole;
+}
+
+.flag {
+    position: absolute;
+    border-top: 7px solid transparent;
+    border-left: 18px solid $flag-blue;
+    border-bottom: 7px solid transparent;
+    height: 0;
+    width: 1.4em;
+}
+
+.tile {
+    position: absolute;
+    background-color: $light-red;
+    width: 12px;
+    height: 6px;
+    border-radius: 0 0 10px 10px;
+}
+
+
+/* --------------- 
+    WINDOWS STYLES
+------------------*/
+
+.window-sm-w {
+    position: absolute;
+    background-color: $window-white;
+    width: 15px;
+    height: 15px;
+}
+
+.window-sm-b {
+    position: absolute;
+    background-color: $window-blue;
+    width: 15px;
+    height: 15px;
+}
+
+.window-md-w {
+    position: absolute;
+    background-color: $window-white;
+    width: 13px;
+    height: 23px;
+}
+
+.window-md-b {
+    position: absolute;
+    background-color: $window-blue;
+    width: 13px;
+    height: 23px;
+}
+
+.window-lg-w {
+    position: absolute;
+    background-color: $window-white;
+    width: 18px;
+    height: 20px;
+}
+
+.window-lg-b {
+    position: absolute;
+    background-color: $window-blue;
+    width: 18px;
+    height: 20px;
+}
+
+.window-xl-w {
+    position: absolute;
+    background-color: $window-white;
+    width: 12px;
+    height: 35px;
+}
+
+.window-xl-b {
+    position: absolute;
+    background-color: $window-blue;
+    width: 12px;
+    height: 35px;
+}
+
+
+/* --------------- 
+    LEFT CLOUD
+------------------*/
+
+.left-cloud {
+    overflow: hidden;
+    position: absolute;
+    width: 10.5em;
+    height: 3.2em;
+    z-index: 2;
+    left: 8.6em;
+    top: 12.1em;
+    .cloud-1 {
+        left: 0;
+        top: 1.1em;
+    }
+    .cloud-2 {
+        left: 3em;
+        top: 0;
+    }
+    .cloud-3 {
+        left: 7.1em;
+        top: 1.1em;
+    }
+}
+
+
+/* --------------- 
+    RIGHT CLOUD
+------------------*/
+
+.right-cloud {
+    overflow: hidden;
+    position: absolute;
+    width: 18.7em;
+    height: 4.1em;
+    z-index: 2;
+    left: 43.9em;
+    top: 23.6em;
+    .cloud-4 {
+        left: 0;
+        top: 1.6em;
+    }
+    .cloud-5 {
+        left: 3.2em;
+        top: 0;
+    }
+    .cloud-6 {
+        left: 7.6em;
+        top: 1.6em;
+    }
+    .cloud-7 {
+        left: 10.8em;
+        top: 0;
+    }
+    .cloud-8 {
+        left: 15.2em;
+        top: 1.6em;
+    }
+}
+
+
+/* --------------- 
+    BIG CLOUDS
+------------------*/
+
+.big-clouds {
+    overflow: hidden;
+    position: absolute;
+    width: 63.6em;
+    height: 19.1em;
+    z-index: 2;
+    left: 3.2em;
+    top: 29.7em;
+    .cloud-xl {
+        width: 21em;
+        height: 28em;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $big-clouds;
+    }
+    .cloud-xxl {
+        width: 25.2em;
+        height: 35em;
+        position: absolute;
+        border-radius: 50%;
+        background-color: $big-clouds;
+    }
+    .cloud-9 {
+        left: -0.2em;
+        top: 6.4em;
+    }
+    .cloud-10 {
+        left: 20em;
+        top: -0.1em;
+    }
+    .cloud-11 {
+        right: -0.1em;
+        top: 6.4em;
+    }
+}
+
+
+/* --------------- 
+    CASTLE
+------------------*/
+
+.castle {
+    width: 44.7em;
+    height: 37.8em;
+    z-index: 3;
+    position: absolute;
+    left: 12.6em;
+    top: 11.1em;
+    .bottom {
+        position: absolute;
+        z-index: 5;
+        background-color: $green;
+        height: 2.7em;
+        bottom: 0.1em;
+        border-radius: 3em 3em 0 0;
+    }
+    .bottom-1 {
+        width: 27.1em;
+        left: 0;
+    }
+    .bottom-2 {
+        width: 9.9em;
+        right: 0;
+    }
+    /* --------------- 
+        LEFT TOWER
+    ------------------*/
+    .left-tower {
+        width: 9.3em;
+        height: 27.7em;
+        z-index: 5;
+        position: absolute;
+        left: 1.9em;
+        bottom: 2.8em;
+        .wall {
+            width: 8.1em;
+            height: 11.9em;
+            position: absolute;
+            left: 0.7em;
+            bottom: 0;
+            background-color: $brick-light;
+            .w-1 {
+                left: 3.3em;
+                top: 1.7em;
+            }
+            .w-2 {
+                left: 3.3em;
+                top: 3.7em;
+            }
+            .w-3 {
+                left: 3.3em;
+                top: 6.9em;
+            }
+            .w-4 {
+                left: 3.3em;
+                top: 8.9em;
+            }
+            .b-1 {
+                left: 0;
+                top: 5.9em;
+            }
+            .b-2 {
+                left: 5.3em;
+                top: 4.2em;
+            }
+            .b-3 {
+                left: 0.5em;
+                top: 1.2em;
+            }
+            .b-4 {
+                left: 1.7em;
+                top: 2.1em;
+            }
+            .b-5 {
+                right: 0.5em;
+                top: 3.4em;
+            }
+            .b-6 {
+                right: 0.8em;
+                bottom: 1.9em;
+            }
+        }
+        .cap-1 {
+            position: absolute;
+            border-top: 1.2em solid $brick-dark;
+            border-left: 0.5em solid transparent;
+            border-right: 0.5em solid transparent;
+            height: 0;
+            width: 9.1em;
+            left: 0.2em;
+            top: 14.6em;
+        }
+        .cap-2 {
+            position: absolute;
+            background-color: $cloud;
+            width: 9.1em;
+            height: 1.9em;
+            top: 12.7em;
+            left: 0.2em;
+            .brick-1 {
+                left: 1.6em;
+                top: -0.1em;
+            }
+            .brick-2 {
+                right: 1.6em;
+                top: -0.1em;
+            }
+        }
+        .roof-1 {
+            .roof {
+                position: absolute;
+                border-bottom: 97px solid $dark-red;
+                border-left: 35px solid transparent;
+                border-right: 35px solid transparent;
+                height: 0;
+                width: 7.7em;
+                top: 3em;
+                left: 0.8em;
+            }
+            .m-1 {
+                left: 4.4em;
+                top: 0;
+            }
+            .f-1 {
+                left: 4.9em;
+                top: 0.2em;
+            }
+            .t-1 {
+                left: 2em;
+                top: 11.1em;
+            }
+            .t-2 {
+                left: 3.1em;
+                top: 11.1em;
+            }
+            .t-3 {
+                left: 5.2em;
+                top: 9.7em;
+            }
+            .t-4 {
+                left: 3.4em;
+                top: 7.1em;
+            }
+        }
+    }
+    /* --------------- 
+        RIGHT TOWER
+    ------------------*/
+    .right-tower {
+        width: 5.8em;
+        height: 26.3em;
+        z-index: 5;
+        position: absolute;
+        left: 19.2em;
+        bottom: 2.8em;
+        .wall {
+            width: 5em;
+            height: 14.5em;
+            position: absolute;
+            bottom: 0;
+            left: 0.4em;
+            background-color: $brick-light;
+            .b-7 {
+                right: 0;
+                bottom: 55px;
+            }
+            .b-8 {
+                right: 7px;
+                bottom: 64px;
+            }
+            .b-9 {
+                top: 15px;
+                left: 3px;
+            }
+            .b-10 {
+                left: 1.5em;
+                top: 0.6em;
+            }
+            .w-5 {
+                left: 1.7em;
+                bottom: 10.1em;
+            }
+            .w-6 {
+                left: 1.7em;
+                bottom: 8.2em;
+            }
+            .w-7 {
+                left: 1.7em;
+                bottom: 3.5em;
+            }
+            .w-8 {
+                left: 1.7em;
+                bottom: 1.5em;
+            }
+        }
+        .cap-3 {
+            position: absolute;
+            border-top: 0.8em solid $brick-dark;
+            border-left: 0.4em solid transparent;
+            border-right: 0.4em solid transparent;
+            height: 0;
+            width: 5.8em;
+            left: 0em;
+            top: 11em;
+        }
+        .cap-4 {
+            position: absolute;
+            background-color: $cloud;
+            width: 5.8em;
+            height: 1.3em;
+            top: 9.7em;
+            left: 0;
+            .b-12 {
+                top: -0.1em;
+                left: 3.5em;
+            }
+            .b-13 {
+                top: -0.1em;
+                left: 1.1em;
+            }
+        }
+        .roof-2 {
+            .roof {
+                position: absolute;
+                border-bottom: 68px solid $brick-dark;
+                border-left: 23px solid transparent;
+                border-right: 23px solid transparent;
+                height: 0;
+                width: 5.1em;
+                top: 2.9em;
+                left: 0.3em;
+                .t-5 {
+                    top: 5.5em;
+                    left: -0.1em;
+                }
+                .t-6 {
+                    top: 5.5em;
+                    left: -1.1em;
+                }
+                .t-7 {
+                    top: 3.1em;
+                    left: 0;
+                }
+                .m-2 {
+                    top: -3em;
+                }
+                .f-2 {
+                    top: -2.8em;
+                    left: 0.5em;
+                }
+            }
+        }
+    }
+    /* --------------- 
+        CENTER TOWER
+    ------------------*/
+    .center-tower {
+        .shadow {
+            width: 6em;
+            height: 0;
+            border-bottom: 114px solid rgba(0, 0, 0, 0.1);
+            border-right: 47px solid transparent;
+            position: absolute;
+            left: 10.7em;
+            bottom: 2.8em;
+            z-index: 10;
+        }
+        .wall {
+            width: 9.1em;
+            height: 11.4em;
+            z-index: 4;
+            position: absolute;
+            left: 10.6em;
+            bottom: 2.8em;
+            background-color: $dark-red;
+            .w-9 {
+                left: 2.3em;
+                top: 1.2em;
+                width: 1.4em;
+            }
+            .w-10 {
+                left: 5.4em;
+                top: 1.2em;
+            }
+            .w-11 {
+                left: 1.7em;
+                bottom: 2.5em;
+            }
+            .w-12 {
+                left: 3.9em;
+                bottom: 2.5em;
+            }
+            .w-13 {
+                left: 6.2em;
+                bottom: 2.5em;
+            }
+            .b-14 {
+                right: 0;
+                top: 4.4em;
+                width: 0.7em;
+            }
+            .b-15 {
+                left: 2.3em;
+                bottom: 0.4em;
+            }
+            .b-16 {
+                left: 3.4em;
+                bottom: 1.3em;
+            }
+            .b-17 {
+                right: 0.7em;
+                top: 3.5em;
+            }
+            .b-18 {
+                left: 0.6em;
+                top: 1.2em;
+            }
+        }
+        .cap-5 {
+            width: 9.1em;
+            height: 1.4em;
+            z-index: 4;
+            position: absolute;
+            left: 10.6em;
+            top: 22.2em;
+            background-color: $cloud;
+        }
+        .roof-3 {
+            position: absolute;
+            z-index: 3;
+            border-bottom: 100px solid $brick-light;
+            border-left: 69px solid transparent;
+            border-right: 69px solid transparent;
+            height: 0;
+            width: 17.5em;
+            top: 12.4em;
+            left: 7.1em;
+            .tile {
+                background-color: $brick-dark;
+            }
+            .t-8 {
+                left: 2.6em;
+                top: 8.6em;
+            }
+            .t-9 {
+                left: 1.5em;
+                top: 8.6em;
+            }
+            .t-10 {
+                left: -3.3em;
+                top: 6.2em;
+            }
+            .t-11 {
+                left: -0.6em;
+                top: 2.1em;
+            }
+            .t-12 {
+                left: 0.5em;
+                top: 2.1em;
+            }
+            .t-13 {
+                left: 2.2em;
+                top: 0.9em;
+            }
+            .b-19 {
+                left: -1.5em;
+                top: 7.2em;
+                width: 1.8em;
+            }
+            .b-20 {
+                left: 2.5em;
+                top: 7.2em;
+                width: 1.8em;
+            }
+            .w-14 {
+                left: -1.5em;
+                top: 5.2em;
+                width: 1.8em;
+            }
+            .w-15 {
+                left: 2.5em;
+                top: 5.2em;
+                width: 1.8em;
+            }
+            .triangle {
+                position: absolute;
+                border-left: 13px solid transparent;
+                border-right: 13px solid transparent;
+                border-bottom: 20px solid $flag-blue;
+                height: 0;
+                width: 2.6em;
+            }
+            .tr-1 {
+                left: -1.9em;
+                top: 3.2em;
+            }
+            .tr-2 {
+                left: 2.1em;
+                top: 3.2em;
+            }
+        }
+        .mini-tower {
+            width: 41px;
+            height: 125px;
+            position: absolute;
+            left: 13.9em;
+            top: -0.1em;
+            z-index: 3;
+            .mini-wall {
+                position: absolute;
+                width: 33px;
+                height: 41px;
+                background-color: $cloud;
+                bottom: 0;
+                left: 0.4em;
+            }
+            .window {
+                position: absolute;
+                width: 9px;
+                height: 25px;
+                background-color: $dark-red;
+                border-radius: 4px 4px 0 0;
+                left: 1.6em;
+                bottom: 1.1em;
+            }
+            .cap-6 {
+                position: absolute;
+                width: 33px;
+                height: 6px;
+                background-color: $light-red;
+                left: 0.4em;
+                bottom: 4.1em;
+            }
+            .roof-4 {
+                position: absolute;
+                border-left: 17px solid transparent;
+                border-right: 17px solid transparent;
+                border-bottom: 48px solid $dark-red;
+                height: 0;
+                width: 4.1em;
+                left: 0;
+                top: 3em;
+            }
+            .t-14 {
+                left: 1em;
+                top: 6.6em;
+            }
+            .m-3 {
+                left: 1.8em;
+                top: 0;
+            }
+            .f-3 {
+                left: 2.3em;
+                top: 0.2em;
+            }
+        }
+    }
+    /* --------------- 
+        BACK TOWER
+    ------------------*/
+    .back-tower {
+        width: 9em;
+        height: 15em;
+        z-index: 2;
+        position: absolute;
+        left: 7.4em;
+        top: 3.6em;
+        .cap-7 {
+            position: absolute;
+            width: 90px;
+            height: 46px;
+            background-color: $cloud;
+            left: 0;
+            bottom: 0;
+        }
+        .roof-5 {
+            position: absolute;
+            border-left: 39px solid transparent;
+            border-right: 39px solid transparent;
+            border-bottom: 74px solid $dark-red;
+            height: 0;
+            width: 8.4em;
+            left: 0.1em;
+            bottom: 4.6em;
+        }
+        .t-15 {
+            left: -2.4em;
+            top: 6.2em;
+        }
+        .t-16 {
+            left: -1.3em;
+            top: 6.2em;
+        }
+        .t-17 {
+            left: 0.1em;
+            top: 2.3em;
+        }
+        .circle {
+            width: 2em;
+            height: 2em;
+            border-radius: 50%;
+            background-color: $cloud;
+            position: absolute;
+            top: 3.5em;
+            left: -0.7em;
+        }
+        .m-4 {
+            left: 4em;
+            top: 0;
+        }
+        .f-4 {
+            left: 4.5em;
+            top: 0.2em;
+        }
+    }
+    /* --------------- 
+        BRIDGE
+    ------------------*/
+    .bridge {
+        position: absolute;
+        width: 17.1em;
+        height: 10.9em;
+        left: 24.6em;
+        bottom: 0.1em;
+        overflow: hidden;
+        .circle {
+            border-radius: 50%;
+            position: absolute;
+        }
+        .outer-circle {
+            width: 19em;
+            height: 17em;
+            background-color: $dark-red;
+            top: 2.5em;
+            left: -2.2em;
+            border: 7px solid $light-red;
+            .inner-circle {
+                width: 15.7em;
+                height: 18em;
+                background-color: $big-clouds;
+                top: 2.5em;
+                left: 1em;
+            }
+            .b-21 {
+                left: 30px;
+                top: 27px;
+            }
+            .b-22 {
+                left: 42px;
+                top: 18px;
+            }
+            .b-23 {
+                right: 45px;
+                top: 12px;
+            }
+            .shadow-1 {
+                background-color: $shadow;
+                position: absolute;
+                top: 29px;
+                left: 15px;
+                width: 9px;
+                height: 40px;
+                transform: skewY(-44deg);
+            }
+            .shadow-2 {
+                background-color: $shadow;
+                position: absolute;
+                top: 20px;
+                right: 26px;
+                width: 6px;
+                height: 40px;
+                transform: skewY(36deg);
+            }
+        }
+        .wally {
+            width: 32px;
+            height: 45px;
+            background-color: $light-red;
+            position: absolute;
+            right: 4px;
+            top: 39px;
+            .b-24 {
+                right: 6px;
+                top: 25px;
+            }
+            .b-25 {
+                right: 0px;
+                top: 34px;
+                height: 7px;
+            }
+        }
+        .cap-8 {
+            background-color: $dark-red;
+            width: 39px;
+            height: 10px;
+            position: absolute;
+            right: 0;
+            top: 29px;
+        }
+        .neck {
+            background-color: darken($dark-red, 5);
+            width: 7px;
+            height: 8px;
+            position: absolute;
+            right: 16px;
+            top: 21px;
+        }
+        .ball {
+            background-image: linear-gradient($light-red 50%, $dark-red 50%);
+            width: 21px;
+            height: 21px;
+            border-radius: 50%;
+            position: absolute;
+            right: 9px;
+            top: 1px;
+        }
+    }
+}
+
+
+/* --------------- 
+    CREDITS
+------------------*/
+
+.credits {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    h1 {
+        color: darken($bg-color, 30);
+        font-size: 0.9em;
+        font-family: Helvetica, sans-serif;
+    }
+}
